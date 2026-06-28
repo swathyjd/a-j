@@ -1,38 +1,33 @@
-// ===============================
-// Wedding Countdown
-// ===============================
+// =====================================
+// Jishnu ❤️ Aswathy Wedding Website
+// Premium Script
+// =====================================
 
+// Wedding Date
 const weddingDate = new Date("August 23, 2026 11:20:00").getTime();
 
-function updateCountdown() {
+// Countdown
+const timer = setInterval(function () {
 
     const now = new Date().getTime();
 
     const distance = weddingDate - now;
 
-    if (distance <= 0) {
-
-        document.getElementById("timer").innerHTML =
-        "<h2>🎉 Today is Our Wedding Day 🎉</h2>";
-
-        return;
-    }
-
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
     const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24))
-        / (1000 * 60 * 60)
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
     );
 
     const minutes = Math.floor(
-        (distance % (1000 * 60 * 60))
-        / (1000 * 60)
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
     );
 
     const seconds = Math.floor(
-        (distance % (1000 * 60))
-        / 1000
+        (distance % (1000 * 60)) /
+        1000
     );
 
     document.getElementById("days").innerHTML = days;
@@ -40,97 +35,63 @@ function updateCountdown() {
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
 
-}
+    if (distance < 0) {
 
-setInterval(updateCountdown,1000);
+        clearInterval(timer);
 
-updateCountdown();
+        document.getElementById("timer").innerHTML =
+        "<h2>💍 Wedding Day Has Arrived 💍</h2>";
+
+    }
+
+},1000);
 
 
-// ===============================
-// Smooth Fade Animation
-// ===============================
+// =====================================
+// Background Music
+// =====================================
 
-const sections = document.querySelectorAll("section");
+const music = document.getElementById("bgmusic");
 
-const observer = new IntersectionObserver((entries)=>{
+document.querySelector(".btn").addEventListener("click",function(){
 
-    entries.forEach(entry=>{
+    if(music){
 
-        if(entry.isIntersecting){
+        music.play();
 
-            entry.target.style.opacity="1";
-            entry.target.style.transform="translateY(0px)";
-
-        }
-
-    });
-
-});
-
-sections.forEach(sec=>{
-
-    sec.style.opacity="0";
-    sec.style.transform="translateY(60px)";
-    sec.style.transition="all 1s ease";
-
-    observer.observe(sec);
+    }
 
 });
 
 
-// ===============================
-// Gallery Zoom Effect
-// ===============================
+// =====================================
+// Gallery Click Zoom
+// =====================================
 
-const images = document.querySelectorAll(".images img");
+document.querySelectorAll(".images img").forEach(function(img){
 
-images.forEach(img=>{
+img.addEventListener("click",function(){
 
-    img.addEventListener("click",()=>{
+window.open(this.src,"_blank");
 
-        window.open(img.src,"_blank");
-
-    });
+});
 
 });
 
 
-// ===============================
-// Welcome Message
-// ===============================
+// =====================================
+// Smooth Fade
+// =====================================
 
-window.onload=function(){
+window.addEventListener("load",function(){
 
-console.log("Welcome to Jishnu ❤️ Aswathy Wedding");
+document.body.style.opacity="1";
 
-};
+});
 
 
-// ===============================
-// Floating Hearts
-// ===============================
+// =====================================
+// Console Message
+// =====================================
 
-function createHeart(){
-
-const heart=document.createElement("div");
-
-heart.innerHTML="❤️";
-
-heart.style.position="fixed";
-heart.style.left=Math.random()*100+"vw";
-heart.style.top="-30px";
-heart.style.fontSize=(20+Math.random()*20)+"px";
-heart.style.animation="fall 8s linear";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-
-heart.remove();
-
-},8000);
-
-}
-
-setInterval(createHeart,1200);
+console.log("Jishnu ❤️ Aswathy Wedding Website Loaded Successfully");
