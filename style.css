@@ -182,3 +182,161 @@ body{
 .reception,
 .contact{
     padding:80px
+/* ===========================
+   Wedding Details
+=========================== */
+
+.details,
+.reception,
+.contact{
+    padding:80px 20px;
+    text-align:center;
+    background:#FFF8F2;
+}
+
+.details h2,
+.reception h2,
+.contact h2{
+    font-family:'Cinzel',serif;
+    font-size:40px;
+    color:#7B001C;
+    margin-bottom:30px;
+}
+
+.details p,
+.reception p,
+.contact p{
+    font-size:20px;
+    line-height:1.8;
+    color:#444;
+}
+
+/* ===========================
+   Gallery
+=========================== */
+
+.gallery{
+    padding:80px 20px;
+    background:#ffffff;
+    text-align:center;
+}
+
+.gallery h2{
+    font-family:'Cinzel',serif;
+    color:#7B001C;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.images{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.images img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:18px;
+    border:5px solid #D4AF37;
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+    transition:0.4s;
+}
+
+.images img:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   Google Maps Button
+=========================== */
+
+.contact a{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 35px;
+    background:#7B001C;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.contact a:hover{
+    background:#D4AF37;
+    color:#7B001C;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+    background:#4A0010;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h2{
+    color:#D4AF37;
+    margin-top:10px;
+    font-family:'Cinzel',serif;
+}
+
+/* ===========================
+   Mobile Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.overlay h1{
+    font-size:34px;
+}
+
+.overlay h3{
+    font-size:18px;
+}
+
+.overlay p{
+    font-size:18px;
+}
+
+.couple h2,
+.gallery h2,
+.details h2,
+.reception h2,
+.contact h2{
+    font-size:30px;
+}
+
+.person{
+    width:90%;
+}
+
+.person img{
+    height:350px;
+}
+
+#timer div{
+    width:90px;
+    height:90px;
+}
+
+#timer span{
+    font-size:28px;
+}
+
+.images{
+    grid-template-columns:1fr;
+}
+
+.images img{
+    height:300px;
+}
+
+}
