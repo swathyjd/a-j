@@ -173,3 +173,12 @@ body{
 .person p{
     color:#666;
 }
+
+/* ===========================
+   Wedding Details
+=========================== */
+
+.details,
+.reception,
+.contact{
+    padding:80px
