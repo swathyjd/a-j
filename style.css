@@ -340,3 +340,155 @@ footer h2{
 }
 
 }
+/* ===========================
+   Premium Animations
+=========================== */
+
+/* Fade Animation */
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(60px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.hero,
+#countdown,
+.couple,
+.details,
+.gallery,
+.reception,
+.contact,
+footer{
+
+animation:fadeUp 1.2s ease;
+
+}
+
+/* Floating Effect */
+
+@keyframes floating{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.person img{
+
+animation:floating 5s ease-in-out infinite;
+
+}
+
+/* Button Animation */
+
+.btn{
+
+box-shadow:0 0 20px rgba(212,175,55,.5);
+
+}
+
+.btn:hover{
+
+box-shadow:0 0 40px gold;
+
+}
+
+/* Gallery Hover */
+
+.images img:hover{
+
+transform:scale(1.08) rotate(.5deg);
+
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+/* Section Card */
+
+.details,
+.reception,
+.contact{
+
+border-radius:25px;
+margin:30px auto;
+max-width:1200px;
+
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+}
+
+/* Gold Divider */
+
+section h2::after{
+
+content:"";
+
+display:block;
+
+width:120px;
+
+height:4px;
+
+background:#D4AF37;
+
+margin:15px auto;
+
+border-radius:50px;
+
+}
+
+/* Smooth Image Border */
+
+.person img,
+.images img{
+
+border:5px solid #D4AF37;
+
+}
+
+/* Footer Glow */
+
+footer{
+
+box-shadow:0 -5px 30px rgba(0,0,0,.25);
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#7B001C;
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#FFF8F2;
+
+}
